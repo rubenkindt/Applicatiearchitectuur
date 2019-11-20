@@ -31,8 +31,7 @@ datum date,
 serieNr varchar(20),
 oid int,
 PRIMARY KEY(datum),
-FOREIGN KEY (serieNr) REFERENCES machine(serieNr),
-FOREIGN KEY (oid) REFERENCES opleiding(oid)
+FOREIGN KEY (serieNr) REFERENCES machine(serieNr)
 );
 
 create table reservatie (
@@ -41,8 +40,7 @@ datum date,
 serieNr varchar(20),
 oid int,
 PRIMARY KEY(rid),
-FOREIGN KEY (serieNr) REFERENCES machine(serieNr),
-FOREIGN KEY (oid) REFERENCES opleiding(oid)
+FOREIGN KEY (serieNr) REFERENCES machine(serieNr)
 );
 
 create table gebruiker (
