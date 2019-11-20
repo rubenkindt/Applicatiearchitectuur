@@ -43,7 +43,13 @@ public class ContolerServlet extends HttpServlet {
             out.println("</html>");
         }
     }
+   public void gotoPagine(String pagina, HttpServletRequest request,HttpServletResponse response)
+            throws ServletException, IOException {
+        RequestDispatcher view;
+    	view=request.getRequestDispatcher(pagina);
+    	view.forward(request,response);
 
+    }
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
