@@ -26,8 +26,19 @@ public class ContolerServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-       
-        if(request.getParameter("submit").equals("goToDocentDetailPagina")){
+        
+        
+    
+        if(request.getParameter("submit").equals("Loginsucces")){//do change
+           
+            
+            if(true){// Do change
+               gotoPagina("overzichtDocent.jsp",request,response);
+           }else{
+               gotoPagina("overzichtStudentExtern.jsp",request,response);
+           }
+           
+        }else if(request.getParameter("submit").equals("goToDocentDetailPagina")){
             String serieNr=request.getParameter("machineSerieNr");
             gotoPagina("DetailDocent.jsp",request,response);
             
