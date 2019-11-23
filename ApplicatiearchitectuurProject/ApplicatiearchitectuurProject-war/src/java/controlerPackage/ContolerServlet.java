@@ -26,15 +26,13 @@ public class ContolerServlet extends HttpServlet {
     @EJB
     private getGegevensDbBean ejbBean;
   
+    @Override
     public void init(){
-
+ 
     }
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        
-        
-    
         if(request.getParameter("submit").equals("Loginsucces")){//do change
            
             

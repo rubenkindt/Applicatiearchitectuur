@@ -21,7 +21,7 @@ public class getGegevensDbBean implements getGegevensDbBeanLocal {
      
     @Override
     public List<Object> getMachines() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return (List<Object>) em.createNamedQuery("Machine.findAll").getResultList();
     }
 
     // Add business logic below. (Right-click in editor and choose
