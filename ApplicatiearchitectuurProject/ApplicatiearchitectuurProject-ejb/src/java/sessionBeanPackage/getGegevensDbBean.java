@@ -5,7 +5,10 @@
  */
 package sessionBeanPackage;
 
+import java.util.List;
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 /**
  *
@@ -13,6 +16,13 @@ import javax.ejb.Stateless;
  */
 @Stateless
 public class getGegevensDbBean implements getGegevensDbBeanLocal {
+    @PersistenceContext
+    EntityManager em;
+     
+    @Override
+    public List<Object> getMachines() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")

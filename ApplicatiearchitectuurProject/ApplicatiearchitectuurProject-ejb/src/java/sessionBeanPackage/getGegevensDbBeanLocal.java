@@ -5,6 +5,7 @@
  */
 package sessionBeanPackage;
 
+import java.util.List;
 import javax.ejb.Local;
 
 /**
@@ -13,5 +14,14 @@ import javax.ejb.Local;
  */
 @Local
 public interface getGegevensDbBeanLocal {
+     public List<Object> getMachines(); 
+    //public int newMachine(String klantNaam,String klantAdres,String klantPostcode,String klantGemeente);
+
+
+    //public List<Object> getReservaties(); 
+    //public void newReservatie();
     
+
+    //public List<Object> getReserveerbareDagen(); 
+    //public void nweReserveerbareDagenDatum();
 }

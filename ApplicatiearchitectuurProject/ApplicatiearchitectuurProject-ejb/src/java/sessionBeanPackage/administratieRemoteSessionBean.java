@@ -5,10 +5,7 @@
  */
 package sessionBeanPackage;
 
-import java.util.List;
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
 /**
  *
@@ -16,14 +13,6 @@ import javax.persistence.PersistenceContext;
  */
 @Stateless
 public class administratieRemoteSessionBean implements administratieRemoteSessionBeanRemote {
-    @PersistenceContext
-    EntityManager em;
-
-    @Override
-    public List<Object> getMachinesByOpleiding() {
-        return (List<Object>)em.createNamedQuery("Machine.findAll").getResultList();  
-    }
-
    
-        
+    
 }

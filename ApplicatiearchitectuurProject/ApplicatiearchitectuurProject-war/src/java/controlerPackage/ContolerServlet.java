@@ -7,6 +7,7 @@ package controlerPackage;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashSet;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import sessionBeanPackage.administratieRemoteSessionBean;
+import sessionBeanPackage.getGegevensDbBean;
 
 /**
  *
@@ -22,7 +24,7 @@ import sessionBeanPackage.administratieRemoteSessionBean;
  */
 public class ContolerServlet extends HttpServlet {
     @EJB
-    private administratieRemoteSessionBean ejbBean;
+    private getGegevensDbBean ejbBean;
   
     public void init(){
 
@@ -37,7 +39,8 @@ public class ContolerServlet extends HttpServlet {
            
             
             if(true){// Do change
-               
+               List lijstAlleMachines =ejbBean.getMachines();
+               request.getSession().setAttribute("alleMachines", lijstAlleMachines);
                
                gotoPagina("overzichtDocent.jsp",request,response);
            }else{
