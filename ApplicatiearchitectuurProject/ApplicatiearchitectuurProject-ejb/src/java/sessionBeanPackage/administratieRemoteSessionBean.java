@@ -13,12 +13,5 @@ import javax.ejb.Stateless;
  */
 @Stateless
 public class administratieRemoteSessionBean implements administratieRemoteSessionBeanRemote {
-<<<<<<< HEAD
-   
-    
-=======
 
-    // Add business logic below. (Right-click in editor and choose
-    // "Insert Code > Add Business Method")
->>>>>>> parent of a12e51b... inserted init in controllerServlet.java
 }
