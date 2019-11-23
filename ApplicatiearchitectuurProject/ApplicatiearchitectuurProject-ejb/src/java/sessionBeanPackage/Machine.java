@@ -38,6 +38,8 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Machine.findBySerieNr", query = "SELECT m FROM Machine m WHERE m.serieNr = :serieNr"),
     @NamedQuery(name = "Machine.findByHuurprijs", query = "SELECT m FROM Machine m WHERE m.huurprijs = :huurprijs"),
     @NamedQuery(name = "Machine.findByAankoopprijs", query = "SELECT m FROM Machine m WHERE m.aankoopprijs = :aankoopprijs")})
+    @NamedQuery(name = "Machine.getLokaal", query = "SELECT m.lokaal FROM Machine m")
+    
 public class Machine implements Serializable {
 
     private static final long serialVersionUID = 1L;

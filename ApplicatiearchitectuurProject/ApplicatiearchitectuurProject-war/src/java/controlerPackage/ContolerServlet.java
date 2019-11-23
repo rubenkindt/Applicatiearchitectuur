@@ -25,11 +25,7 @@ public class ContolerServlet extends HttpServlet {
     private administratieRemoteSessionBean ejbBean;
   
     public void init(){
-        //List result =ejbBean.getLocaties();
-        //getServletContext().setAttribute("locatie", result);
-        //result =ejbBean.getWagens();
-        //getServletContext().setAttribute("typen", result);
-        
+
     }
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -41,6 +37,8 @@ public class ContolerServlet extends HttpServlet {
            
             
             if(true){// Do change
+               
+               
                gotoPagina("overzichtDocent.jsp",request,response);
            }else{
                gotoPagina("overzichtStudentExtern.jsp",request,response);
