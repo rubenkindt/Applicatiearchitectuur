@@ -1,6 +1,6 @@
 <%-- 
-    Document   : betaling
-    Created on : 23-Nov-2019, 15:57:34
+    Document   : DetailDocent
+    Created on : 23-Nov-2019, 15:23:09
     Author     : ruben
 --%>
 

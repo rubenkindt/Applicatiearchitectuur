@@ -46,6 +46,10 @@ public class ContolerServlet extends HttpServlet {
            }
            
         }else if(request.getParameter("submit").equals("goToDocentDetailPagina")){
+
+       
+        if(request.getParameter("submit").equals("goToDocentDetailPagina")){
+
             String serieNr=request.getParameter("machineSerieNr");
             
             
@@ -63,8 +67,9 @@ public class ContolerServlet extends HttpServlet {
         }
         
         
+        }
     }
-   public void gotoPagina(String pagina, HttpServletRequest request,HttpServletResponse response)
+    public void gotoPagina(String pagina, HttpServletRequest request,HttpServletResponse response)
             throws ServletException, IOException {
         RequestDispatcher view;
     	view=request.getRequestDispatcher(pagina);
