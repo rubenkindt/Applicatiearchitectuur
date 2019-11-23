@@ -53,11 +53,13 @@ PRIMARY KEY(gid)
 
 create table student (-- aparte tabel voor studenten is makkelijker voor security
 gid int,
+PRIMARY KEY(gid),
 FOREIGN KEY (gid) REFERENCES gebruiker(gid)
 );
 
 create table extern (-- aparte tabel voor extern is makkelijker voor security
 gid int,
+PRIMARY KEY(gid),
 FOREIGN KEY (gid) REFERENCES gebruiker(gid)
 );
 

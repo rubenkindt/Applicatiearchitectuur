@@ -40,18 +40,6 @@ public class ContolerServlet extends HttpServlet {
             
             gotoPagina("overzichtDocent.jsp",request,response);
         
-        }else if(request.getParameter("submit").equals("goToStudentExtrnDetailPagina")){
-            String serieNr=request.getParameter("machineSerieNr");
-            gotoPagina("detailStudentExtern.jsp",request,response);
-        
-        }else if(request.getParameter("submit").equals("goToStudentExtrnDetailPagina")){
-            String serieNr=request.getParameter("machineSerieNr");
-            gotoPagina("detailStudentExtern.jsp",request,response);
-        
-        }else if(request.getParameter("submit").equals("goToStudentExtrnDetailPagina")){
-            String serieNr=request.getParameter("machineSerieNr");
-            gotoPagina("detailStudentExtern.jsp",request,response);
-        
         }
         
         
