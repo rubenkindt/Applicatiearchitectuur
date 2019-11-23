@@ -5,6 +5,7 @@
  */
 package sessionBeanPackage;
 
+import java.util.List;
 import javax.ejb.Remote;
 
 /**
@@ -13,5 +14,29 @@ import javax.ejb.Remote;
  */
 @Remote
 public interface administratieRemoteSessionBeanRemote {
+    public List<Object> getMachinesLokalen(); 
+    public List<Object> getMachinesOmschrijving(); 
+    public List<Object> getMachinesMnaam();
+    public List<Object> getMachinesSerieNr();
+    public List<Object> getMachineshuurprijs();
+    public List<Object> getMachinesaankoopprijs();
+       
+    public int newMachine(String klantNaam,String klantAdres,String klantPostcode,String klantGemeente);
+
+
+    public List<Object> getReservatiesRid(); 
+    public List<Object> getReservatiesDatum();
+
+    public int newReservaties();
     
+
+    public List<Object> getReserveerbareDagenDatum(); 
+    
+    public int nweReserveerbareDagenDatum();
+
+       
+
+
+
+
 }
