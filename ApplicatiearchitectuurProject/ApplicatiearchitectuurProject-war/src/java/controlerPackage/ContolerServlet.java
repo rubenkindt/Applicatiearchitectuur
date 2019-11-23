@@ -7,6 +7,7 @@ package controlerPackage;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,8 +22,15 @@ import sessionBeanPackage.administratieRemoteSessionBean;
  */
 public class ContolerServlet extends HttpServlet {
     @EJB
-    private administratieRemoteSessionBean beanMetDb;
+    private administratieRemoteSessionBean ejbBean;
   
+    public void init(){
+        //List result =ejbBean.getLocaties();
+        //getServletContext().setAttribute("locatie", result);
+        //result =ejbBean.getWagens();
+        //getServletContext().setAttribute("typen", result);
+        
+    }
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
@@ -40,17 +48,19 @@ public class ContolerServlet extends HttpServlet {
            
         }else if(request.getParameter("submit").equals("goToDocentDetailPagina")){
             String serieNr=request.getParameter("machineSerieNr");
-            gotoPagina("DetailDocent.jsp",request,response);
             
+            
+            gotoPagina("DetailDocent.jsp",request,response);       
         }else if(request.getParameter("submit").equals("goToStudentExtrnDetailPagina")){
             String serieNr=request.getParameter("machineSerieNr");
+            
+            
             gotoPagina("detailStudentExtern.jsp",request,response);
-        
         }else if(request.getParameter("submit").equals("addNewMachine")){
             String serieNr=request.getParameter("machineSerieNr");
             
+            
             gotoPagina("overzichtDocent.jsp",request,response);
-        
         }
         
         
