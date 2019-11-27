@@ -7,8 +7,11 @@ package controlerPackage;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+<<<<<<< HEAD
 import java.util.HashSet;
 import java.util.List;
+=======
+>>>>>>> parent of a12e51b... inserted init in controllerServlet.java
 import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -24,15 +27,17 @@ import sessionBeanPackage.getGegevensDbBean;
  */
 public class ContolerServlet extends HttpServlet {
     @EJB
+<<<<<<< HEAD
     private getGegevensDbBean ejbBean;
   
     @Override
     public void init(){
  
     }
-
+=======
     private administratieRemoteSessionBean beanMetDb;
   
+>>>>>>> parent of a12e51b... inserted init in controllerServlet.java
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         

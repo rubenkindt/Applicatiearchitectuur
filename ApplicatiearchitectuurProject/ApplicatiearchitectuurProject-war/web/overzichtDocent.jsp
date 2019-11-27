@@ -14,10 +14,7 @@
     <body>
         <h1>Hello World!</h1>
         <p>
-            <c:forEach var = "i" items = "${sessionScope.alleMachines}">
-               In <c:out value="${i.getLokaal()}" />, staat <c:out value="${i.getMnaam()}" /> met SerieNr: <c:out value="${i.getSerieNr()}" />.
-              </br>
-            </c:forEach>
+            
         </p>
     </body>
 </html>
